@@ -2,9 +2,9 @@
 import React from "react";
 import dynamic from "next/dynamic";
 
-const AnimatedNumbers = dynamic(
+const AnimatedNumber = dynamic(
   () => {
-    return import("react-animated-numbers");
+    return import("react-animated-number");
   },
   { ssr: false }
 );
@@ -42,8 +42,8 @@ const AchievementsSection = () => {
             >
               <h2 className="text-white text-4xl font-bold flex flex-row">
                 {achievement.prefix}
-                <AnimatedNumbers
-                  includeComma
+                <AnimatedNumber
+                  includecomma
                   animateToNumber={parseInt(achievement.value)}
                   locale="en-US"
                   className="text-white text-4xl font-bold"
