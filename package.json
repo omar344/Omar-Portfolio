@@ -11,10 +11,11 @@
   "dependencies": {
     "@heroicons/react": "^2.1.5",
     "@react-email/components": "^0.0.7",
+    "@react-spring/web": "^9.7.4",
     "framer-motion": "^11.5.4",
     "next": "^13.4.8",
-    "react": "18.2.0",
-    "react-dom": "^18.2.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "react-email": "^1.9.4",
     "react-router-dom": "^6.11.2",
     "react-type-animation": "^3.2.0",
