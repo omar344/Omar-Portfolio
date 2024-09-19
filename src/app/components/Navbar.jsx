@@ -11,6 +11,10 @@ const navLinks = [
     path: "#about",
   },
   {
+    title: "Services", // Corrected spelling
+    path: "#services", // Updated path to match the title
+  },
+  {
     title: "Projects",
     path: "#projects",
   },
@@ -19,6 +23,7 @@ const navLinks = [
     path: "#contact",
   },
 ];
+
 
 const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
@@ -30,7 +35,7 @@ const Navbar = () => {
           href={"/"}
           className="text-2xl md:text-5xl text-white font-semibold"
         >
-          LOGO
+          Omar
         </Link>
         <div className="mobile-menu block md:hidden">
           {!navbarOpen ? (
@@ -49,7 +54,7 @@ const Navbar = () => {
             </button>
           )}
         </div>
-        <div className="menu hidden md:block md:w-auto" id="navbar">
+        <div className="menu hidden md:block md:w-auto text-white" id="navbar">
           <ul className="flex p-4 md:p-0 md:flex-row md:space-x-8 mt-0">
             {navLinks.map((link, index) => (
               <li key={index}>

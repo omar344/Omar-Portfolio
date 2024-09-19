@@ -24,7 +24,7 @@ const HeroSection = () => {
               sequence={[
                 "Omar",
                 1000,
-                "Backend Engineer",
+                "SW Engineer",
                 1000,
                 "Data Analyst",
                 1000,
@@ -48,7 +48,7 @@ const HeroSection = () => {
               Hire Me
             </Link>
             <Link
-              href="https://docs.google.com/document/d/1elg9rMOSsFSG1ROwEGsUfuE92u10JaU5RvptlPSXb4Y/edit?usp=sharing"
+              href="https://drive.google.com/drive/folders/1r_jc1T-6fEsSgFmV6OqbsZxvgG5W_rna"
               className="px-1 inline-block py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-800 text-white mt-3"
             >
               <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2">
@@ -65,7 +65,7 @@ const HeroSection = () => {
         >
           <div className="rounded-full bg-[#181818] w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative">
             <Image
-              src="/images/hero-image.png"
+              src="/images/hero_ copy.jpg"
               alt="hero image"
               className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
               width={300}
