@@ -11,7 +11,7 @@ const ServicesData = [
     tag: ["All", "Web"],
     gitUrl: "/",
     previewUrl: "/",
-    whatsappUrl: "https://wa.me/01015642330" // Replace with actual WhatsApp number
+    whatsappUrl: "https://wa.me/+201015642330" // Replace with actual WhatsApp number
   },
   {
     id: 2,
@@ -20,7 +20,7 @@ const ServicesData = [
     tag: ["All", "Web"],
     gitUrl: "/",
     previewUrl: "/",
-    whatsappUrl: "https://wa.me/01015642330" // Replace with actual WhatsApp number
+    whatsappUrl: "https://wa.me/+201015642330" // Replace with actual WhatsApp number
   },
 ];
 
