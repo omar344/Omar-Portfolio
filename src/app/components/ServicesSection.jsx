@@ -1,41 +1,76 @@
 "use client";
-import React, { useState, useRef } from "react";
+import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import Link from "next/link";
 
-const ServicesData = [
+const servicesData = [
   {
     id: 1,
-    title: "Get Service Now !",
-    image: "/images/projects/analysis.jpg",
-    tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
-    whatsappUrl: "https://wa.me/+201015642330" // Replace with actual WhatsApp number
+    icon: "💻",
+    title: "Full-Stack Web Development",
+    tagline: "Building Modern, Scalable Web Applications",
+    description: "I create end-to-end web solutions that combine powerful backends with beautiful, responsive frontends. From concept to deployment, I deliver production-ready applications that drive real business results.",
+    features: [
+      {
+        name: "Custom Web Applications",
+        detail: "Tailored solutions using React, Next.js, and ASP.NET Core"
+      },
+      {
+        name: "E-Commerce Platforms",
+        detail: "Full-featured online stores with secure payment integration"
+      },
+      {
+        name: "API Development",
+        detail: "RESTful APIs with proper authentication and documentation"
+      },
+      {
+        name: "Database Design",
+        detail: "Optimized MySQL/MSSQL database architecture"
+      },
+      {
+        name: "Cloud Deployment",
+        detail: "Seamless deployment and hosting setup"
+      }
+    ],
+    technologies: ["React", "Next.js", "ASP.NET Core", "C#", "MySQL", "MSSQL"],
+    whatsappUrl: "https://wa.me/+201015642330?text=Hi%20Omar!%20I'm%20interested%20in%20your%20web%20development%20services"
   },
   {
     id: 2,
-    title: "Get Service Now !",
-    image: "/images/projects/soft.jpg",
-    tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
-    whatsappUrl: "https://wa.me/+201015642330" // Replace with actual WhatsApp number
-  },
+    icon: "📊",
+    title: "Data Analysis & Business Intelligence",
+    tagline: "Transform Data into Actionable Insights",
+    description: "I help businesses unlock the power of their data through comprehensive analysis and visualization. From raw data to meaningful insights, I deliver solutions that inform strategic decisions and drive growth.",
+    features: [
+      {
+        name: "Data Analytics",
+        detail: "Python, SQL, and Excel for deep data exploration"
+      },
+      {
+        name: "Interactive Dashboards",
+        detail: "Power BI and Tableau visualizations for real-time insights"
+      },
+      {
+        name: "Business Intelligence",
+        detail: "KPI tracking and performance monitoring systems"
+      },
+      {
+        name: "Predictive Analytics",
+        detail: "Statistical modeling to forecast trends and patterns"
+      },
+      {
+        name: "Custom Reports",
+        detail: "Automated reporting tailored to your business needs"
+      }
+    ],
+    technologies: ["Python", "SQL", "Power BI", "Tableau", "Excel", "Statistics"],
+    whatsappUrl: "https://wa.me/+201015642330?text=Hi%20Omar!%20I'm%20interested%20in%20your%20data%20analysis%20services"
+  }
 ];
 
 const ServicesSection = () => {
-  const [tag, setTag] = useState("All");
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
-
-  const handleTagChange = (newTag) => {
-    setTag(newTag);
-  };
-
-  const filteredProjects = ServicesData.filter((project) =>
-    project.tag.includes(tag)
-  );
 
   const cardVariants = {
     initial: { y: 50, opacity: 0 },
@@ -43,76 +78,112 @@ const ServicesSection = () => {
   };
 
   return (
-    <section id="services" className="py-24 ">
-      <h2 className="text-center text-4xl font-bold text-white mb-8">
-        Offered Services
-      </h2>
-      <h2 className="text-center text-lg text-gray-400 mb-12">
-        Boost your business with my web application and data analysis services. I deliver powerful web solutions and data insights to enhance your success.
-      </h2>
-      <div className="text-white flex flex-row justify-center items-center gap-2 py-6">
-        {/* Add tags filter if needed */}
+    <section id="services" className="py-16 pt-32">
+      <div className="text-center mb-12">
+        <h2 className="text-4xl font-bold text-white mb-4">
+          Services I Offer
+        </h2>
+        <p className="text-[#ADB7BE] text-lg max-w-3xl mx-auto">
+          Comprehensive web development and data analysis solutions designed to help your business grow. 
+          I combine technical expertise with business understanding to deliver results that matter.
+        </p>
       </div>
-      <ul ref={ref} className="grid md:grid-cols-2 gap-8 md:gap-12">
-        {filteredProjects.map((project, index) => (
+
+      <ul ref={ref} className="grid md:grid-cols-2 gap-8">
+        {servicesData.map((service, index) => (
           <motion.li
-            key={project.id}
+            key={service.id}
             variants={cardVariants}
             initial="initial"
             animate={isInView ? "animate" : "initial"}
-            transition={{ duration: 0.3, delay: index * 0.4 }}
-            className="flex flex-col bg-gray-800 p-4 rounded-lg shadow-lg"
+            transition={{ duration: 0.4, delay: index * 0.2 }}
+            className="bg-[#181818] rounded-lg border border-[#33353F] hover:border-primary-500 transition-all duration-300 overflow-hidden group"
           >
-            <img
-              src={project.image}
-              alt={project.title}
-              className="w-full h-80 object-cover rounded-lg mb-4"
-            />
-            <h3 className="text-xl font-semibold text-white mb-2">
-              {project.title}
-            </h3>
-            <div className="flex flex-col flex-grow">
-              {index === 0 && ( // For the first item (Data Analytics Services)
-                <div className="bg-gray-900 p-6 rounded-lg shadow-lg flex-grow">
-                  <h3 className="text-2xl font-bold text-white mb-4">Data Analytics Services</h3>
-                  <p className="text-lg text-gray-300 mb-4">
-                    Unlock the value in your data. Convert data to information, information to insights, and insights to better business outcomes.
-                  </p>
-                  <ul className="list-disc list-inside text-gray-300">
-                    <li className="mb-2"><span className="font-semibold text-white">Data-Driven Decision Making:</span> Make informed decisions based on comprehensive data analysis.</li>
-                    <li className="mb-2"><span className="font-semibold text-white">Risk Management Solutions:</span> Identify and mitigate risks with advanced analytics.</li>
-                    <li className="mb-2"><span className="font-semibold text-white">Personalized Customer Experience:</span> Enhance customer satisfaction through tailored data insights.</li>
-                  </ul>
-                </div>
-              )}
-              {index === 1 && ( // For the second item (Custom Software Development)
-                <div className="bg-gray-900 p-6 rounded-lg shadow-lg flex-grow">
-                  <h3 className="text-2xl font-bold text-white mb-4">Custom Software Development</h3>
-                  <p className="text-lg text-gray-300 mb-4">
-                    Tailored software solutions designed to meet your unique business needs, ensuring seamless integration and enhanced performance across web applications.
-                  </p>
-                  <ul className="list-disc list-inside text-gray-300">
-                    <li className="mb-2"><span className="font-semibold text-white">Tailored Software Solutions:</span> Get software designed specifically for your business requirements.</li>
-                    <li className="mb-2"><span className="font-semibold text-white">Cloud-Based Software Services:</span> Utilize cloud technology for flexible and scalable solutions.</li>
-                    <li className="mb-2"><span className="font-semibold text-white">Web Apps Development:</span> Develop robust and interactive web applications to engage users.</li>
-                  </ul>
-                </div>
-              )}
-              <div className="flex gap-4 mt-4">
-                {project.whatsappUrl && (
-                  <Link href={project.whatsappUrl} target="_blank" rel="noopener noreferrer">
-                    <span className="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600">
-                      Get Service
-                    </span>
-                  </Link>
-                )}
+            {/* Header */}
+            <div className="bg-gradient-to-br from-primary-500 to-secondary-500 p-6">
+              <div className="text-6xl mb-4">{service.icon}</div>
+              <h3 className="text-2xl font-bold text-white mb-2">
+                {service.title}
+              </h3>
+              <p className="text-white/90 text-sm font-medium">
+                {service.tagline}
+              </p>
+            </div>
+
+            {/* Content */}
+            <div className="p-6">
+              <p className="text-[#ADB7BE] mb-6 leading-relaxed">
+                {service.description}
+              </p>
+
+              {/* Features */}
+              <div className="mb-6">
+                <h4 className="text-white font-semibold mb-4 flex items-center gap-2">
+                  <svg className="w-5 h-5 text-primary-500" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  What I Deliver
+                </h4>
+                <ul className="space-y-3">
+                  {service.features.map((feature, idx) => (
+                    <li key={idx} className="flex items-start gap-3">
+                      <span className="text-primary-400 text-lg mt-0.5">•</span>
+                      <div>
+                        <p className="text-white font-medium">{feature.name}</p>
+                        <p className="text-[#ADB7BE] text-sm">{feature.detail}</p>
+                      </div>
+                    </li>
+                  ))}
+                </ul>
               </div>
+
+              {/* Technologies */}
+              <div className="mb-6">
+                <h4 className="text-white font-semibold mb-3 text-sm">Technologies Used:</h4>
+                <div className="flex flex-wrap gap-2">
+                  {service.technologies.map((tech, idx) => (
+                    <span
+                      key={idx}
+                      className="px-3 py-1 text-xs font-medium bg-[#121212] text-primary-400 rounded-full border border-[#33353F]"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              {/* CTA Button */}
+              <Link
+                href={service.whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-2 w-full px-6 py-3 bg-gradient-to-br from-primary-500 to-secondary-500 hover:opacity-90 text-white font-medium rounded-lg transition-all group-hover:gap-3"
+              >
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                </svg>
+                <span>Get Started on WhatsApp</span>
+              </Link>
             </div>
           </motion.li>
         ))}
       </ul>
+
+      {/* Bottom CTA */}
+      <div className="text-center mt-12">
+        <p className="text-[#ADB7BE] text-lg mb-4">
+          Not sure which service you need? Let's discuss your project!
+        </p>
+        <Link
+          href="/#contact"
+          className="inline-block px-8 py-3 rounded-full border-2 border-primary-500 text-primary-500 hover:bg-primary-500 hover:text-white font-medium transition-all"
+        >
+          Schedule a Free Consultation
+        </Link>
+      </div>
     </section>
   );
 };
 
 export default ServicesSection;
+

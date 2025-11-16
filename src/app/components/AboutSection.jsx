@@ -8,123 +8,54 @@ const TAB_DATA = [
     title: "Education",
     id: "education",
     content: (
-      <ul className="list-disc pl-2">
-        
-        <li>Asyut University | Computer Science|2025 </li>
-         <br />
+      <div className="space-y-6">
+        <div className="bg-[#181818] rounded-lg p-4 border border-[#33353F]">
+          <h3 className="text-xl font-bold text-white mb-2">🎓 Asyut University</h3>
+          <p className="text-primary-400 font-semibold mb-2">Bachelor of Computer Science</p>
+          <p className="text-[#ADB7BE] text-sm mb-3">Expected Graduation: 2025</p>
+          <p className="text-[#ADB7BE]">
+            Comprehensive study in computer science fundamentals, software engineering, 
+            algorithms, data structures, and modern development practices.
+          </p>
+        </div>
 
-         <li>Front-end Internship | 2023</li>
-              <p>Specialized in front-end development, refining practical skills in HTML, CSS, and JavaScript.</p>
-              <p>Developed and optimized user interfaces to improve user experience and responsiveness.</p>
-          <br/>
+        <div className="bg-[#181818] rounded-lg p-4 border border-[#33353F]">
+          <h3 className="text-lg font-bold text-white mb-3">💼 Professional Training & Internships</h3>
+          
+          <div className="space-y-4">
+            <div className="border-l-4 border-primary-500 pl-4">
+              <h4 className="text-white font-semibold mb-1">Data Analysis Internship</h4>
+              <p className="text-primary-400 text-sm mb-2">2024</p>
+              <ul className="text-[#ADB7BE] text-sm space-y-1">
+                <li>• Specialized in data analysis using Python, SQL, and Excel</li>
+                <li>• Developed data visualizations with Power BI and Tableau</li>
+                <li>• Conducted statistical analyses to identify trends and patterns</li>
+                <li>• Delivered data-driven solutions to business requirements</li>
+              </ul>
+            </div>
 
-          <li>Backend Internship | 2023</li>
-              <p>Developed back-end solutions utilizing PHP and MySQL.</p>
-              <p>Implemented and optimized server-side logic to enhance performance and scalability. </p>
-              <p>Implemented best practices in database and server management and server configuration.</p>
-              <br/>
-          <li>Data Analysis Internship | 2024</li>
-              <p>Specialized in data analysis, utilizing tools such as Python, SQL, and Excel to extract, clean, and analyze data.</p>
-              <p>Developed and implemented data visualizations using Power BI and Tableau to present actionable insights and support decision-making.</p>
-              <p>Conducted statistical analyses to identify trends, patterns, and correlations within datasets.</p>
-              <p>Collaborated with cross-functional teams to understand business requirements and deliver data-driven solutions.</p>
+            <div className="border-l-4 border-secondary-500 pl-4">
+              <h4 className="text-white font-semibold mb-1">Backend Development Internship</h4>
+              <p className="text-primary-400 text-sm mb-2">2023</p>
+              <ul className="text-[#ADB7BE] text-sm space-y-1">
+                <li>• Developed backend solutions with PHP and MySQL</li>
+                <li>• Optimized server-side logic for performance and scalability</li>
+                <li>• Implemented best practices in database management</li>
+              </ul>
+            </div>
 
-      </ul>
-    ),
-  },
-  {
-    title: "Courses & Training",
-    id: "ct",
-    content: (
-      <ul className="list-disc pl-2">
-        
-        
-          <h6>Front-end Internship | 2023</h6><br/>
-              <li>Specialized in front-end development, refining practical skills in HTML, CSS, and JavaScript.</li>
-              <li>Developed and optimized user interfaces to improve user experience and responsiveness.</li>
-              
-          <br/>
-          <h6 >Backend Internship | 2023</h6><br/>
-              <li>Developed back-end solutions utilizing PHP and MySQL.</li>
-              <li>Implemented and optimized server-side logic to enhance performance and scalability. </li>
-              <li>Implemented best practices in database and server management and server configuration.</li>
-              <br/>
-          <h6>Data Analysis Internship | 2024</h6><br/>
-              <li>Specialized in data analysis, utilizing tools such as Python, SQL, and Excel to extract, clean, and analyze data.</li>
-              <li>Developed and implemented data visualizations using Power BI and Tableau to present actionable insights and support decision-making.</li>
-              <li>Conducted statistical analyses to identify trends, patterns, and correlations within datasets.</li>
-              <li>Collaborated with cross-functional teams to understand business requirements and deliver data-driven solutions.</li>
-
-      </ul>
-    ),
-  },
-  {
-    title: "Skills",
-    id: "skills",
-    content: (
-      <ul className="list-disc pl-2">
-<li>ASP.NET Core (MVC, Web API)</li>
-<li>JavaScript</li>
-<li>Python</li>
-<li>CSS</li>
-<li>HTML</li>
-<li>Power BI</li>
-<li>Tableau</li>
-<li>Excel</li>
-<li>Statistics</li>
-<li>C++</li>
-<li>SQL</li>
-<li>Entity Framework</li>
-<li>LINQ</li>
-<li>MSSQL</li>
-<li>MySQL</li>
-<li>Unit Testing</li>
-<li>Design Patterns</li>
-<li>SOLID Principles</li>
-<li>Object-Oriented Programming</li>
-
-
-      </ul>
-    ),
-  },
-
-  {
-    title: "Courses & Training",
-    id: "ct",
-    content: (
-      <ul className="list-disc pl-2">
-        
-        
-          <h6>Front-end Internship | 2023</h6><br/>
-              <li>Specialized in front-end development, refining practical skills in HTML, CSS, and JavaScript.</li>
-              <li>Developed and optimized user interfaces to improve user experience and responsiveness.</li>
-              
-          <br/>
-          <h6 >Backend Internship | 2023</h6><br/>
-              <li>Developed back-end solutions utilizing PHP and MySQL.</li>
-              <li>Implemented and optimized server-side logic to enhance performance and scalability. </li>
-              <li>Implemented best practices in database and server management and server configuration.</li>
-              <br/>
-          <h6>Data Analysis Internship | 2024</h6><br/>
-              <li>Specialized in data analysis, utilizing tools such as Python, SQL, and Excel to extract, clean, and analyze data.</li>
-              <li>Developed and implemented data visualizations using Power BI and Tableau to present actionable insights and support decision-making.</li>
-              <li>Conducted statistical analyses to identify trends, patterns, and correlations within datasets.</li>
-              <li>Collaborated with cross-functional teams to understand business requirements and deliver data-driven solutions.</li>
-
-      </ul>
-    ),
-  },
-  {
-    title: "Certifications",
-    id: "certifications",
-    content: (
-      <ul className="list-disc pl-2">
-
-        <li>Frontend Development from the Ministry of Communications & Information Technology (MCIT)</li>
-        <li>Backend Development from MCIT</li>
-        <li>Data Analysis from MCIT</li>
-
-      </ul>
+            <div className="border-l-4 border-primary-500 pl-4">
+              <h4 className="text-white font-semibold mb-1">Frontend Development Internship</h4>
+              <p className="text-primary-400 text-sm mb-2">2023</p>
+              <ul className="text-[#ADB7BE] text-sm space-y-1">
+                <li>• Specialized in HTML, CSS, and JavaScript development</li>
+                <li>• Built and optimized user interfaces for better UX</li>
+                <li>• Improved application responsiveness and performance</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
     ),
   },
 ];
@@ -146,15 +77,13 @@ const AboutSection = () => {
         <div className="mt-4 md:mt-7 text-left flex flex-col h-full">
           <h2 className="text-4xl font-bold text-white mb-4 mt-1">About Me</h2>
           <p className="text-base lg:text-lg">
-          I am a software engineer specializing in 
-          ASP.NET and C#, with over a year of 
-          experience in backend development. 
-          My expertise includes designing and 
-          implementing robust server-side logic, database
-           management, API development, 
-           and ensuring high performance and scalability
-            of web applications. 
-
+            I am a full‑stack software engineer who builds polished, production-ready web
+            applications for clients. I combine React and Next.js for fast, user-focused
+            frontends with ASP.NET Core and C# on the server to create end-to-end
+            solutions — from responsive UIs and SEO-friendly server rendering to
+            robust APIs, database design, and deployment. I focus on clean, maintainable
+            code, measurable business value, and fast time-to-market so clients get
+            reliable products that delight users and drive results.
           </p>
           <div className="flex flex-row justify-start mt-8">
           <TabButton
@@ -162,32 +91,11 @@ const AboutSection = () => {
               active={tab === "education"}
             >
               {" "}
-              Education{" "}
-            </TabButton>
-            {/* <TabButton
-              selectTab={() => handleTabChange("ct")}
-              active={tab === "ct"}
-            >
-              {" "}
-              Courses & Training{" "}
-            </TabButton> */}
-            <TabButton
-              selectTab={() => handleTabChange("skills")}
-              active={tab === "skills"}
-            >
-              {" "}
-              Skills{" "}
-            </TabButton>
-            <TabButton
-              selectTab={() => handleTabChange("certifications")}
-              active={tab === "certifications"}
-            >
-              {" "}
-              Certifications{" "}
+              Education & Experience{" "}
             </TabButton>
 
           </div>
-          <div className="mt-8 h-64 overflow-y-auto">
+          <div className="mt-8 h-96 overflow-y-auto">
             {TAB_DATA.find((t) => t.id === tab).content}
           </div>
         </div>

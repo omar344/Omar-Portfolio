@@ -40,6 +40,9 @@ const HeroSection = () => {
            insights and develop 
            reliable web applications that fuel your business success.
           </p>
+          <p className="text-[#9FB0B6] text-sm sm:text-base mb-6">
+            Full‑stack web apps: React · Next.js · ASP.NET
+          </p>
           <div>
             <Link
               href="/#contact"

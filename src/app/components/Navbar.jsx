@@ -11,12 +11,24 @@ const navLinks = [
     path: "#about",
   },
   {
-    title: "Services", // Corrected spelling
-    path: "#services", // Updated path to match the title
+    title: "Certifications",
+    path: "#certifications",
   },
   {
     title: "Projects",
     path: "#projects",
+  },
+  {
+    title: "Services",
+    path: "#services",
+  },
+  {
+    title: "Workflow",
+    path: "#workflow",
+  },
+  {
+    title: "Pricing",
+    path: "#pricing",
   },
   {
     title: "Contact",
