@@ -3,10 +3,92 @@ import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import Link from "next/link";
 
+const LaptopCodeIcon = () => (
+  <svg
+    className="w-10 h-10 text-white"
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <rect
+      x="3"
+      y="4"
+      width="18"
+      height="12"
+      rx="2"
+      className="stroke-current"
+      strokeWidth="1.5"
+    />
+    <path
+      d="M2 18H22V19C22 19.5523 21.5523 20 21 20H3C2.44772 20 2 19.5523 2 19V18Z"
+      className="stroke-current"
+      strokeWidth="1.5"
+    />
+    <path
+      d="M10 9L8.5 10.5L10 12"
+      className="stroke-current"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M14 9L15.5 10.5L14 12"
+      className="stroke-current"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
+
+const AnalyticsIcon = () => (
+  <svg
+    className="w-10 h-10 text-white"
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <rect
+      x="3"
+      y="4"
+      width="18"
+      height="14"
+      rx="2"
+      className="stroke-current"
+      strokeWidth="1.5"
+    />
+    <path
+      d="M7 15V13"
+      className="stroke-current"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+    />
+    <path
+      d="M11 15V11"
+      className="stroke-current"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+    />
+    <path
+      d="M15 15V9"
+      className="stroke-current"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+    />
+    <path
+      d="M7 9L10 11L14 8L17 10"
+      className="stroke-current"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
+
 const servicesData = [
   {
     id: 1,
-    icon: "💻",
+    icon: LaptopCodeIcon,
     title: "Full-Stack Web Development",
     tagline: "Building Modern, Scalable Web Applications",
     description: "I create end-to-end web solutions that combine powerful backends with beautiful, responsive frontends. From concept to deployment, I deliver production-ready applications that drive real business results.",
@@ -37,7 +119,7 @@ const servicesData = [
   },
   {
     id: 2,
-    icon: "📊",
+    icon: AnalyticsIcon,
     title: "Data Analysis & Business Intelligence",
     tagline: "Transform Data into Actionable Insights",
     description: "I help businesses unlock the power of their data through comprehensive analysis and visualization. From raw data to meaningful insights, I deliver solutions that inform strategic decisions and drive growth.",
@@ -101,7 +183,9 @@ const ServicesSection = () => {
           >
             {/* Header */}
             <div className="bg-gradient-to-br from-primary-500 to-secondary-500 p-6">
-              <div className="text-6xl mb-4">{service.icon}</div>
+              <div className="mb-4">
+                <service.icon />
+              </div>
               <h3 className="text-2xl font-bold text-white mb-2">
                 {service.title}
               </h3>

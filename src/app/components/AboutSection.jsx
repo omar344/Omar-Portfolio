@@ -10,7 +10,31 @@ const TAB_DATA = [
     content: (
       <div className="space-y-6">
         <div className="bg-[#181818] rounded-lg p-4 border border-[#33353F]">
-          <h3 className="text-xl font-bold text-white mb-2">🎓 Asyut University</h3>
+          <h3 className="text-xl font-bold text-white mb-2 flex items-center gap-2">
+            <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-gradient-to-br from-primary-500 to-secondary-500">
+              <svg
+                className="w-4 h-4 text-white"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M3 7L12 3L21 7L12 11L3 7Z"
+                  className="stroke-current"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+                <path
+                  d="M7 10V14C7 16.2091 9.23858 18 12 18C14.7614 18 17 16.2091 17 14V10"
+                  className="stroke-current"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                />
+              </svg>
+            </span>
+            Asyut University
+          </h3>
           <p className="text-primary-400 font-semibold mb-2">Bachelor of Computer Science</p>
           <p className="text-[#ADB7BE] text-sm mb-3">Expected Graduation: 2025</p>
           <p className="text-[#ADB7BE]">
@@ -20,7 +44,33 @@ const TAB_DATA = [
         </div>
 
         <div className="bg-[#181818] rounded-lg p-4 border border-[#33353F]">
-          <h3 className="text-lg font-bold text-white mb-3">💼 Professional Training & Internships</h3>
+          <h3 className="text-lg font-bold text-white mb-3 flex items-center gap-2">
+            <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-gradient-to-br from-primary-500 to-secondary-500">
+              <svg
+                className="w-4 h-4 text-white"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  x="3"
+                  y="7"
+                  width="18"
+                  height="12"
+                  rx="2"
+                  className="stroke-current"
+                  strokeWidth="1.5"
+                />
+                <path
+                  d="M9 7V6C9 4.89543 9.89543 4 11 4H13C14.1046 4 15 4.89543 15 6V7"
+                  className="stroke-current"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                />
+              </svg>
+            </span>
+            Professional Training & Internships
+          </h3>
           
           <div className="space-y-4">
             <div className="border-l-4 border-primary-500 pl-4">

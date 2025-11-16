@@ -3,6 +3,59 @@ import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import Link from "next/link";
 
+const BriefcaseIcon = () => (
+  <svg
+    className="w-10 h-10 text-white"
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <rect
+      x="3"
+      y="7"
+      width="18"
+      height="12"
+      rx="2"
+      className="stroke-current"
+      strokeWidth="1.5"
+    />
+    <path
+      d="M9 7V6C9 4.89543 9.89543 4 11 4H13C14.1046 4 15 4.89543 15 6V7"
+      className="stroke-current"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+    />
+    <path
+      d="M3 12H21"
+      className="stroke-current"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+    />
+  </svg>
+);
+
+const RocketIcon = () => (
+  <svg
+    className="w-10 h-10 text-white"
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M5 19L9 15M9 15C9.5 12.5 11 7 16 3C17.5 4.5 18.5 6 19 9C15 14 10.5 15.5 9 15Z"
+      className="stroke-current"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M12 9.5C12.8284 9.5 13.5 8.82843 13.5 8C13.5 7.17157 12.8284 6.5 12 6.5C11.1716 6.5 10.5 7.17157 10.5 8C10.5 8.82843 11.1716 9.5 12 9.5Z"
+      className="stroke-current"
+      strokeWidth="1.5"
+    />
+  </svg>
+);
+
 const pricingTiers = [
   {
     id: 1,
@@ -19,7 +72,7 @@ const pricingTiers = [
       "Documentation"
     ],
     recommended: false,
-    icon: "💼"
+    icon: BriefcaseIcon
   },
   {
     id: 2,
@@ -37,7 +90,7 @@ const pricingTiers = [
       "Performance optimization"
     ],
     recommended: true,
-    icon: "🚀"
+    icon: RocketIcon
   }
 ];
 
@@ -85,7 +138,9 @@ const PricingSection = () => {
             )}
 
             {/* Icon */}
-            <div className="text-5xl mb-4 text-center">{tier.icon}</div>
+            <div className="mb-4 text-center flex justify-center">
+              <tier.icon />
+            </div>
 
             {/* Tier Name */}
             <h3 className="text-2xl font-bold text-white text-center mb-2">

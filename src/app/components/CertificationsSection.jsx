@@ -2,6 +2,175 @@
 import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 
+const DataStructureIcon = () => (
+  <svg
+    className="w-10 h-10 text-white"
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <rect
+      x="3"
+      y="4"
+      width="18"
+      height="4"
+      rx="1"
+      className="stroke-current"
+      strokeWidth="1.5"
+    />
+    <rect
+      x="3"
+      y="10"
+      width="12"
+      height="4"
+      rx="1"
+      className="stroke-current"
+      strokeWidth="1.5"
+    />
+    <rect
+      x="3"
+      y="16"
+      width="8"
+      height="4"
+      rx="1"
+      className="stroke-current"
+      strokeWidth="1.5"
+    />
+    <path
+      d="M17 12H21M19 10V14"
+      className="stroke-current"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
+
+const FrontendIcon = () => (
+  <svg
+    className="w-10 h-10 text-white"
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <rect
+      x="3"
+      y="4"
+      width="18"
+      height="14"
+      rx="2"
+      className="stroke-current"
+      strokeWidth="1.5"
+    />
+    <path
+      d="M9 9L7 11L9 13"
+      className="stroke-current"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M15 9L17 11L15 13"
+      className="stroke-current"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M11 15H13"
+      className="stroke-current"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+    />
+  </svg>
+);
+
+const BackendIcon = () => (
+  <svg
+    className="w-10 h-10 text-white"
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <circle
+      cx="8"
+      cy="8"
+      r="3"
+      className="stroke-current"
+      strokeWidth="1.5"
+    />
+    <circle
+      cx="16"
+      cy="16"
+      r="3"
+      className="stroke-current"
+      strokeWidth="1.5"
+    />
+    <path
+      d="M10.5 10.5L13.5 13.5"
+      className="stroke-current"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+    />
+    <path
+      d="M5 16H7M17 8H19"
+      className="stroke-current"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+    />
+  </svg>
+);
+
+const AnalyticsCertIcon = () => (
+  <svg
+    className="w-10 h-10 text-white"
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <rect
+      x="3"
+      y="4"
+      width="18"
+      height="14"
+      rx="2"
+      className="stroke-current"
+      strokeWidth="1.5"
+    />
+    <path
+      d="M7 14L10 11L13 13L17 9"
+      className="stroke-current"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <circle
+      cx="8"
+      cy="9"
+      r="0.75"
+      className="fill-current"
+    />
+    <circle
+      cx="11"
+      cy="12"
+      r="0.75"
+      className="fill-current"
+    />
+    <circle
+      cx="14"
+      cy="10"
+      r="0.75"
+      className="fill-current"
+    />
+    <circle
+      cx="17"
+      cy="8"
+      r="0.75"
+      className="fill-current"
+    />
+  </svg>
+);
+
 const certificatesData = [
   {
     id: 1,
@@ -9,7 +178,7 @@ const certificatesData = [
     issuer: "Professional Certification",
     date: "2024",
     credentialUrl: "https://drive.google.com/file/d/1qf8xi9bxmShAJVUnDa2TRiv9OeK1R4H8/view?usp=drive_link",
-    icon: "📊",
+    icon: DataStructureIcon,
     skills: ["Algorithms", "Data Structures", "Problem Solving"]
   },
   {
@@ -18,7 +187,7 @@ const certificatesData = [
     issuer: "Ministry of Communications & Information Technology (MCIT)",
     date: "2023",
     credentialUrl: "https://drive.google.com/file/d/16OGDYWzdcI5YzWa10Fsf-DxTosMZ-Yzj/view?usp=sharing",
-    icon: "🎨",
+    icon: FrontendIcon,
     skills: ["HTML", "CSS", "JavaScript", "React"]
   },
   {
@@ -27,7 +196,7 @@ const certificatesData = [
     issuer: "Ministry of Communications & Information Technology (MCIT)",
     date: "2023",
     credentialUrl: "https://drive.google.com/file/d/1If_DvB77FyRm4_2QVBPCMIjp38pEvhQb/view?usp=sharing",
-    icon: "⚙️",
+    icon: BackendIcon,
     skills: ["PHP", "MySQL", "Server-Side Logic", "APIs"]
   },
   {
@@ -36,7 +205,7 @@ const certificatesData = [
     issuer: "Ministry of Communications & Information Technology (MCIT)",
     date: "2024",
     credentialUrl: "https://drive.google.com/file/d/1OcFDFrHT_gAsydTwug81Ab1XSEAwzVpw/view?usp=sharing",
-    icon: "📈",
+    icon: AnalyticsCertIcon,
     skills: ["Python", "SQL", "Power BI", "Tableau"]
   }
 ];
@@ -73,7 +242,9 @@ const CertificationsSection = () => {
           >
             {/* Icon and Title */}
             <div className="flex items-start gap-4 mb-4">
-              <div className="text-5xl">{cert.icon}</div>
+              <div>
+                <cert.icon />
+              </div>
               <div className="flex-1">
                 <h3 className="text-xl font-bold text-white mb-2 group-hover:text-primary-400 transition-colors">
                   {cert.title}
