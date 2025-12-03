@@ -24,7 +24,7 @@ const projectsData = [
     previewUrl: "https://drive.google.com/file/d/13G52gSP3mTtzxr4PaItFutavKa-EKAyB/view",
   },
   {
-    id: 2,
+    id: 3,
     title: "Hospital Management System",
     description: "This project is a Hospital Management System built using ASP.NET Core MVC with MySQL database. It includes functionality for managing administrators, doctors, and patients.",
     image: "/images/projects/1.png",
@@ -33,7 +33,7 @@ const projectsData = [
     previewUrl: "https://github.com/omar344/Hospital_Management_System/blob/main/Home.png",
   },
   {
-    id: 3,
+    id: 4,
     title: "Mobile Accessories E-commerce",
     description: "Developed an e-commerce platform with seamless user registration and login, comprehensive administrative dashboards, and a user-friendly interface for browsing, shopping, and purchasing products.",
     image: "/images/projects/3.png",
@@ -42,7 +42,7 @@ const projectsData = [
     previewUrl: "https://github.com/omar344/Mobile_Accessories_Ecommerce",
   },
   {
-    id: 4,
+    id: 5,
     title: "Freelancing Platform",
     description: "Built a comprehensive job management platform allowing users to manage clients and freelancers, create, update, and delete job listings, oversee contracts, submit proposals, and manage freelancer skills.",
     image: "/images/projects/5.png",
@@ -50,7 +50,6 @@ const projectsData = [
     gitUrl: "https://github.com/omar344/JobQuest",
     previewUrl: "https://github.com/omar344/JobQuest",
   },
-
 ];
 
 const ProjectsSection = () => {
