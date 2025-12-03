@@ -10,7 +10,7 @@ const projectsData = [
     title: "Maharaty",
     description: "Master your skills with Maharaty - a gamified focus tracking app. Set custom goals, track progress, and build focus streaks to achieve mastery.",
     image: "/images/Maharaty.png",
-    tag: ["All", "Web"],
+    tag: ["Full Stack Web Applications"],
     gitUrl: "/",
     previewUrl: "https://maharaty-gamma.vercel.app/",
   },
@@ -19,7 +19,7 @@ const projectsData = [
     title: "RAGify - Graduation Project",
     description: "RAGify, a retrieval-augmented generation (RAG) application that allows users to upload documents and ask questions about their content — including both text and images. Key Features: User registration and login, Upload multiple documents (PDFs, images), Ask questions and receive contextual answers, Seamlessly switch between files during a chat session.",
     image: "/images/projects/multi-model.png",
-    tag: ["All", "Web"],
+    tag: ["Full Stack Web Applications"],
     gitUrl: "https://github.com/omar344/multi-model-rag-app",
     previewUrl: "https://drive.google.com/file/d/13G52gSP3mTtzxr4PaItFutavKa-EKAyB/view",
   },
@@ -28,7 +28,7 @@ const projectsData = [
     title: "Hospital Management System",
     description: "This project is a Hospital Management System built using ASP.NET Core MVC with MySQL database. It includes functionality for managing administrators, doctors, and patients.",
     image: "/images/projects/1.png",
-    tag: ["All", "Web"],
+    tag: ["Full Stack Web Applications"],
     gitUrl: "https://github.com/omar344/Hospital_Management_System",
     previewUrl: "https://github.com/omar344/Hospital_Management_System/blob/main/Home.png",
   },
@@ -37,7 +37,7 @@ const projectsData = [
     title: "Mobile Accessories E-commerce",
     description: "Developed an e-commerce platform with seamless user registration and login, comprehensive administrative dashboards, and a user-friendly interface for browsing, shopping, and purchasing products.",
     image: "/images/projects/3.png",
-    tag: ["All", "Web"],
+    tag: ["Full Stack Web Applications"],
     gitUrl: "https://github.com/omar344/Mobile_Accessories_Ecommerce",
     previewUrl: "https://github.com/omar344/Mobile_Accessories_Ecommerce",
   },
@@ -46,7 +46,7 @@ const projectsData = [
     title: "Freelancing Platform",
     description: "Built a comprehensive job management platform allowing users to manage clients and freelancers, create, update, and delete job listings, oversee contracts, submit proposals, and manage freelancer skills.",
     image: "/images/projects/5.png",
-    tag: ["All", "Web"],
+    tag: ["Full Stack Web Applications"],
     gitUrl: "https://github.com/omar344/JobQuest",
     previewUrl: "https://github.com/omar344/JobQuest",
   },
@@ -54,7 +54,7 @@ const projectsData = [
 ];
 
 const ProjectsSection = () => {
-  const [tag, setTag] = useState("All");
+  const [tag, setTag] = useState("Full Stack Web Applications");
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
@@ -79,13 +79,8 @@ const ProjectsSection = () => {
       <div className="text-white flex flex-row justify-center items-center gap-2 py-6">
         <ProjectTag
           onClick={handleTagChange}
-          name="All"
-          isSelected={tag === "All"}
-        />
-        <ProjectTag
-          onClick={handleTagChange}
-          name="Web"
-          isSelected={tag === "Web"}
+          name="Full Stack Web Applications"
+          isSelected={tag === "Full Stack Web Applications"}
         />
 
         {/* <ProjectTag

@@ -98,7 +98,7 @@ const ServicesSection = () => {
         </p>
       </div>
 
-      <ul ref={ref} className="grid md:grid-cols-2 gap-8">
+      <ul ref={ref} className="max-w-2xl mx-auto">
         {servicesData.map((service, index) => (
           <motion.li
             key={service.id}
