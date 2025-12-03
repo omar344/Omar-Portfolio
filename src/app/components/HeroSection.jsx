@@ -26,8 +26,6 @@ const HeroSection = () => {
                 1000,
                 "SW Engineer",
                 1000,
-                "Data Analyst",
-                1000,
               ]}
               wrapper="span"
               speed={50}
@@ -35,10 +33,8 @@ const HeroSection = () => {
             />
           </h1>
           <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
-          Let's build data-driven, 
-          scalable solutions together. Hire me to transform your data into actionable
-           insights and develop 
-           reliable web applications that fuel your business success.
+            Let's build scalable, robust solutions together. Hire me to develop
+            reliable web applications that fuel your business success.
           </p>
           <p className="text-[#9FB0B6] text-sm sm:text-base mb-6">
             Full‑stack web apps: React · Next.js · ASP.NET

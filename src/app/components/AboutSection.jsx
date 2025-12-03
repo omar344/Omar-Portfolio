@@ -38,7 +38,7 @@ const TAB_DATA = [
           <p className="text-primary-400 font-semibold mb-2">Bachelor of Computer Science</p>
           <p className="text-[#ADB7BE] text-sm mb-3">Expected Graduation: 2025</p>
           <p className="text-[#ADB7BE]">
-            Comprehensive study in computer science fundamentals, software engineering, 
+            Comprehensive study in computer science fundamentals, software engineering,
             algorithms, data structures, and modern development practices.
           </p>
         </div>
@@ -71,18 +71,9 @@ const TAB_DATA = [
             </span>
             Professional Training & Internships
           </h3>
-          
+
           <div className="space-y-4">
-            <div className="border-l-4 border-primary-500 pl-4">
-              <h4 className="text-white font-semibold mb-1">Data Analysis Internship</h4>
-              <p className="text-primary-400 text-sm mb-2">2024</p>
-              <ul className="text-[#ADB7BE] text-sm space-y-1">
-                <li>• Specialized in data analysis using Python, SQL, and Excel</li>
-                <li>• Developed data visualizations with Power BI and Tableau</li>
-                <li>• Conducted statistical analyses to identify trends and patterns</li>
-                <li>• Delivered data-driven solutions to business requirements</li>
-              </ul>
-            </div>
+
 
             <div className="border-l-4 border-secondary-500 pl-4">
               <h4 className="text-white font-semibold mb-1">Backend Development Internship</h4>
@@ -136,7 +127,7 @@ const AboutSection = () => {
             reliable products that delight users and drive results.
           </p>
           <div className="flex flex-row justify-start mt-8">
-          <TabButton
+            <TabButton
               selectTab={() => handleTabChange("education")}
               active={tab === "education"}
             >

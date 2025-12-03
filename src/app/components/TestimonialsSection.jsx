@@ -8,7 +8,7 @@ const testimonialsData = [
     name: "Adel Kazaz",
     title: "Business Owner",
     company: "Kazaz Business Solutions",
-    quote: "Omar developed a comprehensive website for my business along with detailed data analysis that transformed how we understand our operations. His technical skills are exceptional, and he delivered everything on time. The insights from the analysis helped us make better decisions and the website perfectly represents our brand. Highly recommended!",
+    quote: "Omar developed a comprehensive website for my business that transformed how we understand our operations. His technical skills are exceptional, and he delivered everything on time. The website perfectly represents our brand. Highly recommended!",
     rating: 5,
     avatar: "AK"
   },
@@ -26,7 +26,7 @@ const testimonialsData = [
     name: "Ahmed Essam",
     title: "Shop Owner",
     company: "Essam Retail",
-    quote: "Omar built an excellent e-commerce website for my shop and provided invaluable data analysis of our sales patterns. The website is professional, user-friendly, and our online sales have increased significantly. The data insights helped us understand customer behavior and optimize our inventory. Outstanding work!",
+    quote: "Omar built an excellent e-commerce website for my shop. The website is professional, user-friendly, and our online sales have increased significantly. Outstanding work!",
     rating: 5,
     avatar: "AE"
   },

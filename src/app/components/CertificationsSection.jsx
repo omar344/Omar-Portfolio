@@ -121,55 +121,6 @@ const BackendIcon = () => (
   </svg>
 );
 
-const AnalyticsCertIcon = () => (
-  <svg
-    className="w-10 h-10 text-white"
-    viewBox="0 0 24 24"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <rect
-      x="3"
-      y="4"
-      width="18"
-      height="14"
-      rx="2"
-      className="stroke-current"
-      strokeWidth="1.5"
-    />
-    <path
-      d="M7 14L10 11L13 13L17 9"
-      className="stroke-current"
-      strokeWidth="1.5"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
-    <circle
-      cx="8"
-      cy="9"
-      r="0.75"
-      className="fill-current"
-    />
-    <circle
-      cx="11"
-      cy="12"
-      r="0.75"
-      className="fill-current"
-    />
-    <circle
-      cx="14"
-      cy="10"
-      r="0.75"
-      className="fill-current"
-    />
-    <circle
-      cx="17"
-      cy="8"
-      r="0.75"
-      className="fill-current"
-    />
-  </svg>
-);
 
 const certificatesData = [
   {
@@ -199,15 +150,7 @@ const certificatesData = [
     icon: BackendIcon,
     skills: ["PHP", "MySQL", "Server-Side Logic", "APIs"]
   },
-  {
-    id: 4,
-    title: "Data Analysis",
-    issuer: "Ministry of Communications & Information Technology (MCIT)",
-    date: "2024",
-    credentialUrl: "https://drive.google.com/file/d/1OcFDFrHT_gAsydTwug81Ab1XSEAwzVpw/view?usp=sharing",
-    icon: AnalyticsCertIcon,
-    skills: ["Python", "SQL", "Power BI", "Tableau"]
-  }
+
 ];
 
 const CertificationsSection = () => {
@@ -226,7 +169,7 @@ const CertificationsSection = () => {
           Certifications & Credentials
         </h2>
         <p className="text-[#ADB7BE] text-lg max-w-2xl mx-auto">
-          Professional certifications validating my expertise in software development and data analysis
+          Professional certifications validating my expertise in software development
         </p>
       </div>
 

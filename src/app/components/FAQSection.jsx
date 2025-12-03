@@ -11,7 +11,7 @@ const faqData = [
   {
     id: 2,
     question: "What technologies do you work with?",
-    answer: "I specialize in full-stack development with ASP.NET Core, C#, React, and Next.js. For data analysis, I use Python, SQL, Power BI, and Tableau. I also work with MySQL, MSSQL, Entity Framework, and modern cloud deployment tools."
+    answer: "I specialize in full-stack development with ASP.NET Core, C#, React, and Next.js. I also work with MySQL, MSSQL, Entity Framework, and modern cloud deployment tools."
   },
   {
     id: 3,
@@ -88,9 +88,8 @@ const FAQSection = () => {
                 {faq.question}
               </h3>
               <svg
-                className={`w-6 h-6 text-primary-500 flex-shrink-0 transition-transform duration-300 ${
-                  openId === faq.id ? "rotate-180" : ""
-                }`}
+                className={`w-6 h-6 text-primary-500 flex-shrink-0 transition-transform duration-300 ${openId === faq.id ? "rotate-180" : ""
+                  }`}
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -105,9 +104,8 @@ const FAQSection = () => {
             </button>
 
             <div
-              className={`overflow-hidden transition-all duration-300 ${
-                openId === faq.id ? "max-h-96" : "max-h-0"
-              }`}
+              className={`overflow-hidden transition-all duration-300 ${openId === faq.id ? "max-h-96" : "max-h-0"
+                }`}
             >
               <div className="px-6 pb-5">
                 <p className="text-[#ADB7BE] leading-relaxed">
