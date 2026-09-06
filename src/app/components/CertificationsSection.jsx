@@ -123,6 +123,8 @@ const certificatesData = [
     date: "2024",
     credentialUrl:
       "https://drive.google.com/file/d/1qf8xi9bxmShAJVUnDa2TRiv9OeK1R4H8/view?usp=drive_link",
+    imageUrl:
+      "https://drive.google.com/thumbnail?id=1qf8xi9bxmShAJVUnDa2TRiv9OeK1R4H8&sz=w1200",
     icon: DataStructureIcon,
     skills: ["Algorithms", "Data Structures", "Problem Solving"],
   },
@@ -133,6 +135,8 @@ const certificatesData = [
     date: "2023",
     credentialUrl:
       "https://drive.google.com/file/d/16OGDYWzdcI5YzWa10Fsf-DxTosMZ-Yzj/view?usp=sharing",
+    imageUrl:
+      "https://drive.google.com/thumbnail?id=16OGDYWzdcI5YzWa10Fsf-DxTosMZ-Yzj&sz=w1200",
     icon: FrontendIcon,
     skills: ["HTML", "CSS", "JavaScript", "React"],
   },
@@ -143,6 +147,8 @@ const certificatesData = [
     date: "2023",
     credentialUrl:
       "https://drive.google.com/file/d/1If_DvB77FyRm4_2QVBPCMIjp38pEvhQb/view?usp=sharing",
+    imageUrl:
+      "https://drive.google.com/thumbnail?id=1If_DvB77FyRm4_2QVBPCMIjp38pEvhQb&sz=w1200",
     icon: BackendIcon,
     skills: ["PHP", "MySQL", "Server-Side Logic", "APIs"],
   },
@@ -153,6 +159,8 @@ const certificatesData = [
     date: "2026",
     credentialUrl:
       "https://drive.google.com/file/d/1N7OUaqexzJSNxrIJuNcMURjYGL7NDd_0/view?usp=sharing",
+    imageUrl:
+      "https://drive.google.com/thumbnail?id=1N7OUaqexzJSNxrIJuNcMURjYGL7NDd_0&sz=w1200",
     icon: BackendIcon,
     skills: ["Software Architecture", "C#", "Testing"],
   },
@@ -163,6 +171,8 @@ const certificatesData = [
     date: "2024",
     credentialUrl:
       "https://drive.google.com/file/d/1OcFDFrHT_gAsydTwug81Ab1XSEAwzVpw/view?usp=sharing",
+    imageUrl:
+      "https://drive.google.com/thumbnail?id=1OcFDFrHT_gAsydTwug81Ab1XSEAwzVpw&sz=w1200",
     icon: BackendIcon,
     skills: ["Data Analysis", "Statistics", "Python"],
   },
@@ -173,6 +183,8 @@ const certificatesData = [
     date: "2026",
     credentialUrl:
       "https://drive.google.com/file/d/1vvs1aUGguWDu22XnWXsgflUU3-J-i9JR/view?usp=sharing",
+    imageUrl:
+      "https://drive.google.com/thumbnail?id=1vvs1aUGguWDu22XnWXsgflUU3-J-i9JR&sz=w1200",
     icon: BackendIcon,
     skills: [
       "Proposal writing",
@@ -211,56 +223,70 @@ const CertificationsSection = () => {
             initial="initial"
             animate={isInView ? "animate" : "initial"}
             transition={{ duration: 0.3, delay: index * 0.1 }}
-            className="bg-[#181818] rounded-lg p-6 border border-[#33353F] hover:border-primary-500 transition-all duration-300 group"
+            className="bg-[#181818] rounded-lg overflow-hidden border border-[#33353F] hover:border-primary-500 transition-all duration-300 group"
           >
-            {/* Icon and Title */}
-            <div className="flex items-start gap-4 mb-4">
-              <div>
-                <cert.icon />
-              </div>
-              <div className="flex-1">
-                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-primary-400 transition-colors">
-                  {cert.title}
-                </h3>
-                <p className="text-[#ADB7BE] text-sm mb-1">{cert.issuer}</p>
-                <p className="text-[#ADB7BE] text-sm">{cert.date}</p>
-              </div>
-            </div>
-
-            {/* Skills Badges */}
-            <div className="flex flex-wrap gap-2 mb-4">
-              {cert.skills.map((skill, idx) => (
-                <span
-                  key={idx}
-                  className="px-3 py-1 text-xs font-medium bg-[#121212] text-primary-400 rounded-full border border-[#33353F]"
-                >
-                  {skill}
-                </span>
-              ))}
-            </div>
-
-            {/* View Certificate Button */}
             <a
               href={cert.credentialUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-primary-400 hover:text-primary-300 font-medium group-hover:gap-3 transition-all"
+              className="block"
             >
-              <span>View Certificate</span>
-              <svg
-                className="w-4 h-4"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+              <div className="overflow-hidden border-b border-[#33353F] bg-[#0f0f0f]">
+                <img
+                  src={cert.imageUrl}
+                  alt={cert.title}
+                  className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
                 />
-              </svg>
+              </div>
             </a>
+
+            <div className="p-6">
+              <div className="flex items-start gap-4 mb-4">
+                <div>
+                  <cert.icon />
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-xl font-bold text-white mb-2 group-hover:text-primary-400 transition-colors">
+                    {cert.title}
+                  </h3>
+                  <p className="text-[#ADB7BE] text-sm mb-1">{cert.issuer}</p>
+                  <p className="text-[#ADB7BE] text-sm">{cert.date}</p>
+                </div>
+              </div>
+
+              <div className="flex flex-wrap gap-2 mb-4">
+                {cert.skills.map((skill, idx) => (
+                  <span
+                    key={idx}
+                    className="px-3 py-1 text-xs font-medium bg-[#121212] text-primary-400 rounded-full border border-[#33353F]"
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
+
+              <a
+                href={cert.credentialUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-primary-400 hover:text-primary-300 font-medium group-hover:gap-3 transition-all"
+              >
+                <span>Open certificate</span>
+                <svg
+                  className="w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                  />
+                </svg>
+              </a>
+            </div>
           </motion.li>
         ))}
       </ul>
