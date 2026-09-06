@@ -92,13 +92,7 @@ const BackendIcon = () => (
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <circle
-      cx="8"
-      cy="8"
-      r="3"
-      className="stroke-current"
-      strokeWidth="1.5"
-    />
+    <circle cx="8" cy="8" r="3" className="stroke-current" strokeWidth="1.5" />
     <circle
       cx="16"
       cy="16"
@@ -121,36 +115,71 @@ const BackendIcon = () => (
   </svg>
 );
 
-
 const certificatesData = [
   {
     id: 1,
     title: "Data Structures & Algorithms (DSA)",
     issuer: "Professional Certification",
     date: "2024",
-    credentialUrl: "https://drive.google.com/file/d/1qf8xi9bxmShAJVUnDa2TRiv9OeK1R4H8/view?usp=drive_link",
+    credentialUrl:
+      "https://drive.google.com/file/d/1qf8xi9bxmShAJVUnDa2TRiv9OeK1R4H8/view?usp=drive_link",
     icon: DataStructureIcon,
-    skills: ["Algorithms", "Data Structures", "Problem Solving"]
+    skills: ["Algorithms", "Data Structures", "Problem Solving"],
   },
   {
     id: 2,
     title: "Frontend Development",
     issuer: "Ministry of Communications & Information Technology (MCIT)",
     date: "2023",
-    credentialUrl: "https://drive.google.com/file/d/16OGDYWzdcI5YzWa10Fsf-DxTosMZ-Yzj/view?usp=sharing",
+    credentialUrl:
+      "https://drive.google.com/file/d/16OGDYWzdcI5YzWa10Fsf-DxTosMZ-Yzj/view?usp=sharing",
     icon: FrontendIcon,
-    skills: ["HTML", "CSS", "JavaScript", "React"]
+    skills: ["HTML", "CSS", "JavaScript", "React"],
   },
   {
     id: 3,
     title: "Backend Development (PHP)",
     issuer: "Ministry of Communications & Information Technology (MCIT)",
     date: "2023",
-    credentialUrl: "https://drive.google.com/file/d/1If_DvB77FyRm4_2QVBPCMIjp38pEvhQb/view?usp=sharing",
+    credentialUrl:
+      "https://drive.google.com/file/d/1If_DvB77FyRm4_2QVBPCMIjp38pEvhQb/view?usp=sharing",
     icon: BackendIcon,
-    skills: ["PHP", "MySQL", "Server-Side Logic", "APIs"]
+    skills: ["PHP", "MySQL", "Server-Side Logic", "APIs"],
   },
-
+  {
+    id: 4,
+    title: "Software Architecture Essentials: Masterclass",
+    issuer: "Udemy",
+    date: "2026",
+    credentialUrl:
+      "https://drive.google.com/file/d/1N7OUaqexzJSNxrIJuNcMURjYGL7NDd_0/view?usp=sharing",
+    icon: BackendIcon,
+    skills: ["Software Architecture", "C#", "Testing"],
+  },
+  {
+    id: 5,
+    title: "Data Analysis: Skills for the Freelance Professional",
+    issuer: "Ministry of Communications & Information Technology (MCIT)",
+    date: "2024",
+    credentialUrl:
+      "https://drive.google.com/file/d/1OcFDFrHT_gAsydTwug81Ab1XSEAwzVpw/view?usp=sharing",
+    icon: BackendIcon,
+    skills: ["Data Analysis", "Statistics", "Python"],
+  },
+  {
+    id: 6,
+    title: "The ITIDA Gigs freelancing program",
+    issuer: "Information Technology Industry Development Agency, ITIDA",
+    date: "2026",
+    credentialUrl:
+      "https://drive.google.com/file/d/1vvs1aUGguWDu22XnWXsgflUU3-J-i9JR/view?usp=sharing",
+    icon: BackendIcon,
+    skills: [
+      "Proposal writing",
+      "Negotiations and communication skills",
+      "marketing strategies",
+    ],
+  },
 ];
 
 const CertificationsSection = () => {
@@ -169,7 +198,8 @@ const CertificationsSection = () => {
           Certifications & Credentials
         </h2>
         <p className="text-[#ADB7BE] text-lg max-w-2xl mx-auto">
-          Professional certifications validating my expertise in software development
+          Professional certifications validating my expertise in software
+          development
         </p>
       </div>
 
@@ -192,12 +222,8 @@ const CertificationsSection = () => {
                 <h3 className="text-xl font-bold text-white mb-2 group-hover:text-primary-400 transition-colors">
                   {cert.title}
                 </h3>
-                <p className="text-[#ADB7BE] text-sm mb-1">
-                  {cert.issuer}
-                </p>
-                <p className="text-[#ADB7BE] text-sm">
-                  {cert.date}
-                </p>
+                <p className="text-[#ADB7BE] text-sm mb-1">{cert.issuer}</p>
+                <p className="text-[#ADB7BE] text-sm">{cert.date}</p>
               </div>
             </div>
 
