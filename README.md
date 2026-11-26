@@ -1,14 +1,27 @@
-# Portfolio Website
+# Omar Abadi Portfolio
 
-This is a portfolio website built with Next.js and Tailwind CSS. It showcases your skills, projects, and achievements in an elegant and responsive design.
+My personal portfolio website, live at **[omar-dusky.vercel.app](https://omar-dusky.vercel.app/)**.
 
-## Dependencies
+## Sections
 
-- Next.js: A React framework for server-side rendering and static site generation.
-- Tailwind CSS: A highly customizable CSS framework.
-- React: A JavaScript library for building user interfaces.
-- React Icons: A collection of popular icons for React projects.
-- TypeScript: A typed superset of JavaScript that compiles to plain JavaScript.
+- **About**: background, education, and experience
+- **Certifications**: professional training and certificates
+- **Projects**: selected work with links to repositories
+- **Services / Workflow / Pricing**: what I offer as a freelance developer
+- **Contact**: ways to reach me
 
+## Tech Stack
 
+- **Next.js** + **React** (JavaScript)
+- **Tailwind CSS**
+- **React Icons**
+- Deployed on **Vercel**
 
+## Running Locally
+
+```bash
+npm install
+npm run dev
+```
+
+The site runs on `http://localhost:3000`.
